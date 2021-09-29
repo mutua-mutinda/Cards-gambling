@@ -24,6 +24,13 @@ defmodule Cards do
 
   @doc """
     Searches if a card provided is in the deck of created cards
+
+  ## Example
+
+      iex>deck = Card.create_deck
+      iex>Cards.contains?(deck, "Ace of Spades")
+      true
+
   """
   def contains?(deck, card) do
     Enum.member?(deck, card)
@@ -34,10 +41,12 @@ defmodule Cards do
     The `hand_size` argument indicates the size of cards should a hand have.
 
   ## Example
+
       iex>deck = Card.create_deck
       iex>{hand, deck} = Cards.deal(deck, 1)
       iex>hand
       ["Ace of Spades"]
+
 
   """
   def deal(deck, hand_size) do
@@ -67,9 +76,11 @@ defmodule Cards do
     The `hand_size` argument indicates the size of cards should a hand have.
 
   ## Example
+
       iex>{hand, deck} = Card.create_hand(3)
       iex>hand
       ["Four of Heart", "Five of Spades", "Ace of Heart"]
+
 
   """
   def create_hand(hand_size) do
