@@ -25,10 +25,10 @@ defmodule Cards do
   @doc """
     Searches if a card provided is in the deck of created cards
 
-  ## Example
+  ## Examples
 
-      iex>deck = Card.create_deck
-      iex>Cards.contains?(deck, "Ace of Spades")
+      iex> deck = Card.create_deck
+      iex> Cards.contains?(deck, "Ace of Spades")
       true
 
   """
@@ -40,11 +40,11 @@ defmodule Cards do
     Deals specified cards to a player by dividing the deck into a hand.
     The `hand_size` argument indicates the size of cards should a hand have.
 
-  ## Example
+  ## Examples
 
-      iex>deck = Card.create_deck
-      iex>{hand, deck} = Cards.deal(deck, 1)
-      iex>hand
+      iex> deck = Card.create_deck
+      iex> {hand, deck} = Cards.deal(deck, 1)
+      iex> hand
       ["Ace of Spades"]
 
 
@@ -75,10 +75,10 @@ defmodule Cards do
     It creates a hand size of cards to get the player started.
     The `hand_size` argument indicates the size of cards should a hand have.
 
-  ## Example
+  ## Examples
 
-      iex>{hand, deck} = Card.create_hand(3)
-      iex>hand
+      iex> {hand, deck} = Card.create_hand(3)
+      iex> hand
       ["Four of Heart", "Five of Spades", "Ace of Heart"]
 
 
